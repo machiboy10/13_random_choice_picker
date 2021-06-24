@@ -1,5 +1,6 @@
 const tagsEl = document.getElementById('tags')
 const textarea = document.getElementById('textarea')
+const timer = document.getElementById('timer')
 
 textarea.focus()
 
@@ -43,7 +44,7 @@ function randomSelect(){
             const randomTag = pickRandomTag()
             highlightTag(randomTag)
         }, 100)
-    }, 30 * 100)
+    }, timer.value * 1000)
 }
 
 function pickRandomTag(){
